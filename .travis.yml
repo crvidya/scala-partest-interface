@@ -5,6 +5,3 @@ scala:
   - 2.11.0-SNAPSHOT
 jdk:
   - openjdk7
-notifications:
-  email:
-    - adriaan.moors@typesafe.com

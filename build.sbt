@@ -15,3 +15,6 @@ libraryDependencies += "org.scala-sbt" % "test-interface" % "1.0"
 
 
 // looking for boilerplate? we have it! (in standard.sbt)
+testOptions in Test <+= (target in Test) map {
+  t => Tests.Argument(TestFrameworks.ScalaTest, "junitxml(directory=\"%s\")" format (t / "../shippable/testresults"))
+}
